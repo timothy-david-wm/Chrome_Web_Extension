@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Hello World",
+  "description": "Blocks youtube, netflix, and all other social media sites",
+  "version": "1.01",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "icons":{
+    "64":"icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.youtube.com/*", "https://www.youtube.com/*", "https://www.facebook.com/*",
+      "https://www.reddit.com/*", "https://plus.google.com/*", "https://www.instagram.com/*", "https://www.netflix.com/*",
+        "https://www.hulu.com/*", "https://images.google.com/*"],
+      "js": ["myscript.js"]
+    }
+  ]
+  }
